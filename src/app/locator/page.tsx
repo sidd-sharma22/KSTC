@@ -24,7 +24,7 @@ export default function StoreLocatorPage() {
         {/* Left: Map */}
         <div className="flex-1 rounded-2xl overflow-hidden border border-brand-border/50 shadow-sm bg-white min-h-[400px] lg:min-h-[500px]">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.123456789!2d78.2!3d26.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDEyJzAwLjAiTiA3OMKwMTInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d371.3723121338518!2d78.22375409293994!3d26.266931819122416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c77cbcb628c1%3A0x5d89e0ad2bd0301a!2sKhatu%20Shyam%20Trading%20Co.!5e0!3m2!1sen!2sin!4v1782753549477!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0, minHeight: "400px" }}
