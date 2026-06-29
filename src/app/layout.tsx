@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import { CartProvider } from "@/context/CartContext";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,8 +30,19 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans text-brand-text bg-brand-background">
-        {children}
+      <body className="min-h-full flex flex-col font-sans text-brand-text bg-brand-background relative">
+        <CartProvider>
+          {/* Background Gradient Effect */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent h-[50vh] -z-10" />
+          
+          <Header />
+          
+          <main className="flex-1 flex flex-col">
+            {children}
+          </main>
+
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
