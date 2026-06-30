@@ -74,7 +74,7 @@ export default function ContactUsPage() {
               <MapPin className="w-5 h-5 text-brand-accent" /> Our Address
             </h3>
             <p className="text-sm text-brand-text/80 leading-relaxed mb-4">
-              Radhapuram, near Amity University, Vaibhav Enclave, Maharajpura, Gwalior, Madhya Pradesh, 474005, India
+              Radhapuram, Vaibhav Enclave, Maharajpura, Gwalior-474005, Madhya Pradesh, India
             </p>
             <a
               href="https://maps.app.goo.gl/HMytKeSHLpnLAgAp7"
@@ -106,23 +106,23 @@ export default function ContactUsPage() {
               <Phone className="w-5 h-5 text-brand-accent" /> Contact
             </h3>
             <div className="space-y-3 text-sm text-brand-text/80">
-              <p><span className="font-semibold text-brand-primary">Phone:</span> <a href="tel:9340486840">+91 93404 86840</a></p>
-              <p><span className="font-semibold text-brand-primary">Alternate Phone:</span> <a href="tel:9074912742">+91 90749 12742</a></p>
+              <p><span className="font-semibold text-brand-primary">Phone:</span> <a href="tel:+919340486840">+91 93404 86840</a></p>
+              <p><span className="font-semibold text-brand-primary">Alternate Phone:</span> <a href="tel:+919074912742">+91 90749 12742</a></p>
               <p><span className="font-semibold text-brand-primary">Email:</span> <a href="mailto:kstradingco88@gmail.com">kstradingco88@gmail.com</a></p>
-              <p><span className="font-semibold text-brand-primary"><a href="https://wa.me/919340486840">WhatsApp: +91 93404 86840</a></span></p>
+              <p><span className="font-semibold text-brand-primary">WhatsApp:</span> <a href="https://wa.me/919340486840?text=Hello!%20I'm%20interested%20in%20your%20products.%20I've%20got%20you%20from%20your%20website.%20Let's%20have%20a%20good%20deal." target="_blank" rel="noopener noreferrer">+91 93404 86840</a></p>
             </div>
           </div>
 
           {/* Social Card */}
           <div className="bg-white rounded-2xl border border-brand-border/50 p-6 shadow-sm">
             <h3 className="font-heading font-semibold text-brand-primary text-lg mb-4 flex items-center gap-2">
-              <Globe className="w-5 h-5 text-brand-accent" /> Keep In Touch
+              <Globe className="w-5 h-5 text-brand-accent" /> Social Media
             </h3>
             <div className="space-y-2 text-sm">
-              <div className="flex gap-3">
-                <SocialIcon href="#" icon={<Facebook className="w-4 h-4" />} label="Facebook" />
-                <SocialIcon href="#" icon={<Instagram className="w-4 h-4" />} label="Instagram" />
-                <SocialIcon href="https://wa.me/919340486840?text=Hello!%20I'm%20interested%20in%20your%20products.%20I've%20got%20you%20from%20your%20website.%20Let's%20have%20a%20good%20deal." icon={<WhatsApp className="w-4 h-4" />} label="WhatsApp" />
+              <div className="flex gap-5 items-center mt-1">
+                <SocialIcon href="https://wa.me/919340486840?text=Hello!%20I'm%20interested%20in%20your%20products.%20I've%20got%20you%20from%20your%20website.%20Let's%20have%20a%20good%20deal." icon={<WhatsApp className="w-5 h-5" />} label="WhatsApp" />
+                <SocialIcon href="#" icon={<Facebook className="w-5 h-5" />} label="Facebook" />
+                <SocialIcon href="https://www.instagram.com/khatushyamtradingco" icon={<Instagram className="w-5 h-5" />} label="Instagram" />
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ function Instagram(props: React.SVGProps<SVGSVGElement>) {
 function WhatsApp(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" {...props}>
-      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
     </svg>
   );
 }
