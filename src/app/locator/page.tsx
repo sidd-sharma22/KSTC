@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 export default function StoreLocatorPage() {
   return (
     <div className="flex flex-col flex-1 pb-20">
-      
+
       {/* Page Header */}
       <div className="max-w-7xl mx-auto w-full px-4 pt-8 pb-6 md:px-8">
         <div className="text-[10px] font-bold text-brand-text/50 uppercase tracking-widest mb-2">
@@ -20,11 +20,11 @@ export default function StoreLocatorPage() {
       </div>
 
       <div className="max-w-7xl mx-auto w-full px-4 md:px-8 flex flex-col lg:flex-row gap-8">
-        
+
         {/* Left: Map */}
         <div className="flex-1 rounded-2xl overflow-hidden border border-brand-border/50 shadow-sm bg-white min-h-[400px] lg:min-h-[500px]">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d371.3723121338518!2d78.22375409293994!3d26.266931819122416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c77cbcb628c1%3A0x5d89e0ad2bd0301a!2sKhatu%20Shyam%20Trading%20Co.!5e0!3m2!1sen!2sin!4v1782753549477!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3287.0145320883375!2d78.22335264366733!3d26.26678713027006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c77cbcb628c1%3A0x5d89e0ad2bd0301a!2sKhatu%20Shyam%20Trading%20Co.!5e0!3m2!1sen!2sin!4v1782819374303!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0, minHeight: "400px" }}
@@ -37,7 +37,7 @@ export default function StoreLocatorPage() {
 
         {/* Right: Store Details */}
         <div className="w-full lg:w-96 shrink-0 flex flex-col gap-6">
-          
+
           {/* Address Card */}
           <div className="bg-white rounded-2xl border border-brand-border/50 p-6 shadow-sm">
             <h3 className="font-heading font-semibold text-brand-primary text-lg mb-4 flex items-center gap-2">
@@ -63,9 +63,10 @@ export default function StoreLocatorPage() {
               <Phone className="w-5 h-5 text-brand-accent" /> Contact
             </h3>
             <div className="space-y-3 text-sm text-brand-text/80">
-              <p><span className="font-semibold text-brand-primary">Phone:</span> +91 98765 43210</p>
-              <p><span className="font-semibold text-brand-primary">Email:</span> support@khatushyamtrading.com</p>
-              <p><span className="font-semibold text-brand-primary">WhatsApp:</span> +91 98765 43210</p>
+              <p><span className="font-semibold text-brand-primary">Phone:</span> <a href="tel:9340486840">+91 93404 86840</a></p>
+              <p><span className="font-semibold text-brand-primary">Alternate Phone:</span> <a href="tel:9074912742">+91 90749 12742</a></p>
+              <p><span className="font-semibold text-brand-primary">Email:</span> <a href="mailto:kstradingco88@gmail.com">kstradingco88@gmail.com</a></p>
+              <p><span className="font-semibold text-brand-primary"><a href="https://wa.me/919340486840">WhatsApp:</a></span> +91 93404 86840</p>
             </div>
           </div>
 
@@ -76,12 +77,8 @@ export default function StoreLocatorPage() {
             </h3>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between text-brand-text/80">
-                <span>Monday - Saturday</span>
-                <span className="font-semibold text-brand-primary">9:00 AM - 7:00 PM</span>
-              </div>
-              <div className="flex justify-between text-brand-text/80">
-                <span>Sunday</span>
-                <span className="font-semibold text-red-500">Closed</span>
+                <span>Monday - Sunday</span>
+                <span className="font-semibold text-brand-primary">10:00 AM - 05:00 PM</span>
               </div>
             </div>
           </div>
