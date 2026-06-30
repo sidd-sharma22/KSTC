@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Search, MapPin, Store, User, ShoppingCart, Menu, X, Home as HomeIcon } from "lucide-react";
+import { Search, MessageSquare, Store, User, ShoppingCart, Menu, X, Home as HomeIcon } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/context/CartContext";
@@ -55,7 +55,7 @@ export default function Header() {
           {/* Desktop Nav Icons */}
           <div className="hidden lg:flex items-center gap-1">
             <NavIcon href="/" icon={<HomeIcon className="w-4 h-4" />} label="Home" />
-            <NavIcon href="/locator" icon={<MapPin className="w-4 h-4" />} label="Store" />
+            <NavIcon href="/contact-us" icon={<MessageSquare className="w-4 h-4" />} label="Contact" />
             <NavIcon href="/category/all-products" icon={<Store className="w-4 h-4" />} label="Shop" />
             <NavIcon href="/account" icon={<User className="w-4 h-4" />} label="Account" />
           </div>
@@ -103,7 +103,7 @@ export default function Header() {
             {/* Mobile Links */}
             <div className="flex flex-col gap-2">
               <MobileNavLink href="/" icon={<HomeIcon className="w-4 h-4" />} label="Home" onClick={() => setIsMobileMenuOpen(false)} />
-              <MobileNavLink href="/locator" icon={<MapPin className="w-4 h-4" />} label="Store Locator" onClick={() => setIsMobileMenuOpen(false)} />
+              <MobileNavLink href="/contact-us" icon={<MessageSquare className="w-4 h-4" />} label="Contact Us" onClick={() => setIsMobileMenuOpen(false)} />
               <MobileNavLink href="/category/all-products" icon={<Store className="w-4 h-4" />} label="Shop" onClick={() => setIsMobileMenuOpen(false)} />
               <MobileNavLink href="/account" icon={<User className="w-4 h-4" />} label="My Account" onClick={() => setIsMobileMenuOpen(false)} />
             </div>
