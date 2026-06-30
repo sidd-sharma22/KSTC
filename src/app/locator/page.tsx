@@ -66,7 +66,7 @@ export default function StoreLocatorPage() {
               <p><span className="font-semibold text-brand-primary">Phone:</span> <a href="tel:9340486840">+91 93404 86840</a></p>
               <p><span className="font-semibold text-brand-primary">Alternate Phone:</span> <a href="tel:9074912742">+91 90749 12742</a></p>
               <p><span className="font-semibold text-brand-primary">Email:</span> <a href="mailto:kstradingco88@gmail.com">kstradingco88@gmail.com</a></p>
-              <p><span className="font-semibold text-brand-primary"><a href="https://wa.me/919340486840">WhatsApp:</a></span> +91 93404 86840</p>
+              <p><span className="font-semibold text-brand-primary"><a href="https://wa.me/919340486840">WhatsApp: +91 93404 86840</a></span></p>
             </div>
           </div>
 
