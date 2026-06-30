@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-brand-background pt-16 pb-8 border-t border-brand-border/50 mt-20">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           
           {/* Brand Info */}
           <div className="space-y-4">
@@ -22,16 +22,11 @@ export default function Footer() {
             <p className="text-sm text-brand-text/70 leading-relaxed max-w-xs mt-4">
               Authorized distributor for Sentini Flopipes and Johnson's Pedders serving retail and trade customers in the Gwalior & Chambal region.
             </p>
-            <div className="flex gap-3 pt-2">
-              <SocialIcon href="#" label="Facebook" />
-              <SocialIcon href="#" label="Instagram" />
-              <SocialIcon href="#" label="Twitter" />
-            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold text-brand-primary mb-6">Shop</h4>
+            <h4 className="font-heading font-semibold text-brand-primary mb-6">Categories</h4>
             <ul className="space-y-3">
               <FooterLink href="/category/bathroom-ware">Bathroom Ware</FooterLink>
               <FooterLink href="/category/sanitary-ware">Sanitary Ware</FooterLink>
@@ -42,12 +37,12 @@ export default function Footer() {
 
           {/* Trade & Support */}
           <div>
-            <h4 className="font-heading font-semibold text-brand-primary mb-6">Shop & Support</h4>
+            <h4 className="font-heading font-semibold text-brand-primary mb-6">Support Center</h4>
             <ul className="space-y-3">
               <FooterLink href="/shop">Shop Accounts</FooterLink>
-              <FooterLink href="/bulk-orders">Bulk Orders</FooterLink>
+              <FooterLink href="/faqs">FAQs</FooterLink>
               <FooterLink href="/support">Help Center</FooterLink>
-              <FooterLink href="/contact">Contact Us</FooterLink>
+              <FooterLink href="/contact-us">Contact Us</FooterLink>
             </ul>
           </div>
 
@@ -72,25 +67,19 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Keep in Touch */}
+          <div>
+            <h4 className="font-heading font-semibold text-brand-primary mb-6">Keep in Touch</h4>
+            <div className="flex gap-3">
+              <SocialIcon href="#" icon={<Facebook className="w-4 h-4" />} label="Facebook" />
+              <SocialIcon href="#" icon={<Instagram className="w-4 h-4" />} label="Instagram" />
+              <SocialIcon href="#" icon={<Twitter className="w-4 h-4" />} label="Twitter" />
+              <SocialIcon href="#" icon={<Youtube className="w-4 h-4" />} label="YouTube" />
+            </div>
+          </div>
+
         </div>
 
-        {/* Newsletter (Glass Chip Accent) */}
-        <div className="glass rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 mb-12">
-          <div>
-            <h3 className="font-heading font-semibold text-lg text-brand-primary mb-1">Subscribe to our Newsletter</h3>
-            <p className="text-sm text-brand-text/70">Get the latest product updates and exclusive trade offers.</p>
-          </div>
-          <div className="flex w-full md:w-auto gap-2">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
-              className="w-full md:w-64 px-4 py-2.5 bg-white/50 border border-white/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm"
-            />
-            <button className="px-6 py-2.5 bg-brand-primary text-white font-medium rounded-xl hover:bg-brand-primary/90 transition-colors whitespace-nowrap text-sm shadow-sm">
-              Subscribe
-            </button>
-          </div>
-        </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-brand-border flex flex-col md:flex-row items-center justify-between gap-4">
@@ -107,10 +96,10 @@ export default function Footer() {
   );
 }
 
-function SocialIcon({ href, label }: { href: string; label: string }) {
+function SocialIcon({ href, label, icon }: { href: string; label: string; icon?: React.ReactNode }) {
   return (
     <a href={href} className="w-8 h-8 rounded-full bg-white border border-brand-border flex items-center justify-center text-brand-text/60 hover:text-brand-primary hover:border-brand-primary/30 hover:shadow-sm transition-all text-xs font-bold" title={label}>
-      {label.charAt(0)}
+      {icon ? icon : label.charAt(0)}
     </a>
   );
 }

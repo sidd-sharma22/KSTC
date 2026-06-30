@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full px-4 py-4 md:px-8">
       {/* Floating Glass Container */}
-      <div className="mx-auto max-w-7xl glass-panel rounded-2xl px-4 py-3 flex items-center justify-between transition-all duration-300">
+      <div className="mx-auto max-w-7xl bg-white border border-brand-border rounded-2xl px-4 py-3 flex items-center justify-between shadow-sm transition-all duration-300">
         
         {/* Left: Logo & Brand */}
         <div className="flex items-center gap-4">
@@ -41,7 +41,7 @@ export default function Header() {
           <input 
             type="text" 
             placeholder="Search products, brands, or SKUs..." 
-            className="w-full pl-11 pr-4 py-2.5 bg-white/50 backdrop-blur-md border border-white/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent/40 focus:bg-white/70 transition-all placeholder:text-brand-text/50 text-sm shadow-sm"
+            className="w-full pl-11 pr-4 py-2.5 bg-gray-50 border border-brand-border rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent/40 focus:bg-white transition-all placeholder:text-brand-text/50 text-sm shadow-sm"
           />
           <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
             <kbd className="hidden lg:inline-flex items-center gap-1 px-2 py-1 text-[10px] font-medium text-brand-text/50 bg-white/50 rounded-md border border-brand-border">
@@ -72,7 +72,7 @@ export default function Header() {
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="lg:hidden p-2.5 bg-white/50 rounded-xl border border-white/60 shadow-sm ml-1"
+            className="lg:hidden p-2.5 bg-white rounded-xl border border-brand-border shadow-sm ml-1"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-5 h-5 text-brand-primary" /> : <Menu className="w-5 h-5 text-brand-primary" />}
@@ -88,7 +88,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-20 left-4 right-4 glass-panel rounded-2xl p-4 lg:hidden shadow-lg border border-white/60"
+            className="absolute top-20 left-4 right-4 bg-white rounded-2xl p-4 lg:hidden shadow-xl border border-brand-border"
           >
             {/* Mobile Search */}
             <div className="relative mb-4">
@@ -96,7 +96,7 @@ export default function Header() {
               <input 
                 type="text" 
                 placeholder="Search products..." 
-                className="w-full pl-10 pr-4 py-2 bg-white/60 border border-white/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm"
+                className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-brand-border rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm"
               />
             </div>
             
@@ -116,7 +116,7 @@ export default function Header() {
 
 function NavIcon({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
   return (
-    <Link href={href} className="flex flex-col items-center justify-center w-[60px] h-[52px] rounded-xl hover:bg-white/60 transition-colors group">
+    <Link href={href} className="flex flex-col items-center justify-center w-[60px] h-[52px] rounded-xl hover:bg-gray-50 transition-colors group">
       <div className="text-brand-text/60 group-hover:text-brand-primary transition-colors mb-1">
         {icon}
       </div>
@@ -129,8 +129,8 @@ function NavIcon({ href, icon, label }: { href: string; icon: React.ReactNode; l
 
 function MobileNavLink({ href, icon, label, onClick }: { href: string; icon: React.ReactNode; label: string; onClick?: () => void }) {
   return (
-    <Link href={href} onClick={onClick} className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/60 transition-colors">
-      <div className="text-brand-primary p-2 bg-white rounded-lg shadow-sm">
+    <Link href={href} onClick={onClick} className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-brand-border/50">
+      <div className="text-brand-primary p-2 bg-gray-50 rounded-lg shadow-sm border border-brand-border/30">
         {icon}
       </div>
       <span className="text-sm font-medium text-brand-text">{label}</span>

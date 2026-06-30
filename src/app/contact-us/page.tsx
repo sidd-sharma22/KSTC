@@ -2,27 +2,56 @@ import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 
-export default function StoreLocatorPage() {
+export default function ContactUsPage() {
   return (
     <div className="flex flex-col flex-1 pb-20">
 
       {/* Page Header */}
       <div className="max-w-7xl mx-auto w-full px-4 pt-8 pb-6 md:px-8">
         <div className="text-[10px] font-bold text-brand-text/50 uppercase tracking-widest mb-2">
-          <Link href="/" className="hover:text-brand-primary transition-colors">Home</Link> / Store Locator
+          <Link href="/" className="hover:text-brand-primary transition-colors">Home</Link> / Contact Us
         </div>
         <h1 className="text-3xl md:text-4xl font-bold text-brand-primary font-heading">
-          Visit Our Store
+          Contact Us
         </h1>
         <p className="text-sm text-brand-text/70 mt-2 max-w-xl">
-          Come visit us at our showroom in Gwalior. We stock the full range of Sentini Flopipes and Johnson&apos;s Pedders products.
+          Get in touch with us for inquiries, support, or to visit our showroom in Gwalior.
         </p>
       </div>
 
       <div className="max-w-7xl mx-auto w-full px-4 md:px-8 flex flex-col lg:flex-row gap-8">
 
-        {/* Left: Map */}
-        <div className="flex-1 rounded-2xl overflow-hidden border border-brand-border/50 shadow-sm bg-white min-h-[400px] lg:min-h-[500px]">
+        {/* Left: Form & Map */}
+        <div className="flex-1 flex flex-col gap-8">
+          
+          {/* Contact Form */}
+          <div className="bg-white rounded-2xl border border-brand-border/50 p-6 md:p-8 shadow-sm">
+            <h2 className="text-2xl font-bold text-brand-primary mb-6 font-heading">Send us a Message</h2>
+            <form className="space-y-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="space-y-2">
+                  <label htmlFor="name" className="text-sm font-medium text-brand-text">Name</label>
+                  <input type="text" id="name" className="w-full px-4 py-2.5 bg-gray-50 border border-brand-border rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm transition-all" placeholder="Your Name" />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="email" className="text-sm font-medium text-brand-text">Email</label>
+                  <input type="email" id="email" className="w-full px-4 py-2.5 bg-gray-50 border border-brand-border rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm transition-all" placeholder="your@email.com" />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="phone" className="text-sm font-medium text-brand-text">Phone (Optional)</label>
+                <input type="tel" id="phone" className="w-full px-4 py-2.5 bg-gray-50 border border-brand-border rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm transition-all" placeholder="Your Phone Number" />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-sm font-medium text-brand-text">Message</label>
+                <textarea id="message" rows={4} className="w-full px-4 py-2.5 bg-gray-50 border border-brand-border rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm transition-all resize-y" placeholder="How can we help you?"></textarea>
+              </div>
+              <Button type="button" variant="primary" className="w-full md:w-auto">Send Message</Button>
+            </form>
+          </div>
+
+          {/* Map */}
+          <div className="rounded-2xl overflow-hidden border border-brand-border/50 shadow-sm bg-white min-h-[400px]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3287.0145320883375!2d78.22335264366733!3d26.26678713027006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c77cbcb628c1%3A0x5d89e0ad2bd0301a!2sKhatu%20Shyam%20Trading%20Co.!5e0!3m2!1sen!2sin!4v1782819374303!5m2!1sen!2sin"
             width="100%"
@@ -33,6 +62,7 @@ export default function StoreLocatorPage() {
             referrerPolicy="no-referrer-when-downgrade"
             title="Khatu Shyam Trading Co. Location"
           />
+          </div>
         </div>
 
         {/* Right: Store Details */}
