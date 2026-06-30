@@ -46,7 +46,7 @@ export default function ContactUsPage() {
                 <label htmlFor="message" className="text-sm font-medium text-brand-text">Message</label>
                 <textarea id="message" rows={4} className="w-full px-4 py-2.5 bg-gray-50 border border-brand-border rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm transition-all resize-y" placeholder="How can we help you?"></textarea>
               </div>
-              <Button type="button" variant="primary" className="w-full md:w-auto">Send Message</Button>
+              <Button type="button" variant="solid" className="w-full md:w-auto">Send Message</Button>
             </form>
           </div>
 
